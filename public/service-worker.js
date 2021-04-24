@@ -3,9 +3,11 @@ const DATA_CACHE_NAME = "data-budget-v1";
 
 const FILES_TO_CACHE = [
     '/',
-    './index.html',
+    '/index.html',
     '/js/index.js',
+    '/js/idb.js',
     '/css/styles.css',
+    '/manifest.json',
     '/icons/icon-72x72.png',
     '/icons/icon-96x96.png',
     '/icons/icon-128x128.png',
@@ -13,9 +15,8 @@ const FILES_TO_CACHE = [
     '/icons/icon-152x152.png',
     '/icons/icon-192x192.png',
     '/icons/icon-384x384.png',
-    '/icons/icon-512x512.png',
-    '/models/transaction.js',
-    './routes/api.js'
+    '/icons/icon-512x512.png'
+
 ]
 
 self.addEventListener('install', function(evt){
@@ -70,7 +71,7 @@ self.addEventListener('fetch', function(evt) {
         );
 
         return
-    } else {
+    }
         evt.respondWith(
             fetch(evt.request).catch(function(){
                 return caches.match(evt.request).then(function(response) {
@@ -83,5 +84,5 @@ self.addEventListener('fetch', function(evt) {
                 });
             })
         );
-    }
+    
 });
