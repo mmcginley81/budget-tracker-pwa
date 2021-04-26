@@ -11,4 +11,7 @@ THEN they will receive a notification that they have added an expense or deposit
 WHEN the user reestablishes an internet connection  
 THEN the deposits or expenses added while they were offline are added to their transaction history and their totals are updated  
 
+<img width="722" alt="budget-tracker-pwa" src="https://user-images.githubusercontent.com/75404915/116015383-e43d8000-a5ed-11eb-9447-b9b29547bf9b.PNG">
+
+
 
