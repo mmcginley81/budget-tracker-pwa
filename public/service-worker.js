@@ -72,6 +72,7 @@ self.addEventListener('fetch', function(evt) {
 
         return
     }
+    //The code above will console.log an error with the service worker, but the code below will still commit your requests to heroku/MongoDb Atlas upon going online.
         evt.respondWith(
             fetch(evt.request).catch(function(){
                 return caches.match(evt.request).then(function(response) {
